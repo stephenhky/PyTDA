@@ -3,6 +3,7 @@ __author__ = 'stephenhky'
 from itertools import combinations
 from scipy.sparse import dok_matrix
 import numpy as np
+from operator import add
 
 class SimplicialComplex:
     def __init__(self, simplices=[]):
@@ -65,3 +66,7 @@ class SimplicialComplex:
             boundop_ip1_rank = boundop_ip1.shape[1]
 
         return ((boundop_i.shape[1]-boundop_i_rank)-boundop_ip1_rank)
+
+    def euler_characteristics(self):
+        max_n = max(map(len, self.simplices))
+        return reduce(add, map(lambda a: (-1 if a % 2==1 else 1)*self.betti_number(a), range(max_n)))
