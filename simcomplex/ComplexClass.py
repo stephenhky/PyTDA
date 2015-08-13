@@ -44,6 +44,6 @@ class SimplicialComplex:
                 target_simplex = source_simplex[:a]+source_simplex[(a+1):]
                 i = target_simplices_dict[target_simplex]
                 j = source_simplices_dict[source_simplex]
-                S[i, j] = (-1)**a
+                S[i, j] = -1 if a % 2==1 else 1   # S[i, j] = (-1)**a
 
         return S
