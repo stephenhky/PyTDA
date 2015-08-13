@@ -52,10 +52,13 @@ class SimplicialComplex:
         boundop_i = self.boundary_operator(i)
         boundop_ip1 = self.boundary_operator(i+1)
 
-        try:
-            boundop_i_rank = np.linalg.matrix_rank(boundop_i.toarray())
-        except np.linalg.LinAlgError:
-            boundop_i_rank = boundop_i.shape[1]
+        if i==0:
+            boundop_i_rank = 0
+        else:
+            try:
+                boundop_i_rank = np.linalg.matrix_rank(boundop_i.toarray())
+            except np.linalg.LinAlgError:
+                boundop_i_rank = boundop_i.shape[1]
         try:
             boundop_ip1_rank = np.linalg.matrix_rank(boundop_ip1.toarray())
         except np.linalg.LinAlgError:
