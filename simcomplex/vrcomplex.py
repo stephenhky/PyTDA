@@ -1,7 +1,7 @@
 __author__ = 'stephenhky'
 
-from simcomplex import SimplicialComplex
 import networkx as nx
+from simcomplex import SimplicialComplex
 from scipy.spatial import distance
 from itertools import product
 
