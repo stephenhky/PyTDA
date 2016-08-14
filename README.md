@@ -27,8 +27,8 @@ the simplicial complexes are, and how homologies are defined:
 * [Simplicial Homology of the Alpha Complex](http://demonstrations.wolfram.com/SimplicialHomologyOfTheAlphaComplex/)
 
 ## Other TDA Packages
-### R
-* [TDA](https://cran.r-project.org/web/packages/TDA/index.html) (article: [\[arXix\]](http://arxiv.org/abs/1411.1830))\
+It is recommended that for real application, you should use the following packages
+for efficiency, because my codes serve the pedagogical purpose only.
 
 ### C++
 * [Dionysus](http://www.mrzv.org/software/dionysus/)
@@ -37,10 +37,13 @@ the simplicial complexes are, and how homologies are defined:
 ### Python
 * [Dionysus](http://www.mrzv.org/software/dionysus/python/overview.html)
 
+### R
+* [TDA](https://cran.r-project.org/web/packages/TDA/index.html) (article: [\[arXiv\]](http://arxiv.org/abs/1411.1830))
+
 ## References
 * Afra J. Zomorodian. *Topology for Computing* (New York, NY: Cambridge University Press, 2009). [\[Amazon\]](https://www.amazon.com/Computing-Cambridge-Monographs-Computational-Mathematics/dp/0521136091)
 * Afra J. Zomorodian. "Topological Data Analysis," *Proceedings of Symposia in Applied Mathematics* (2011). [\[link\]](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.261.1298)
 * Afra Zomorodian, Gunnar Carlsson, “Computing Persistent Homology,” *Discrete Comput. Geom.* 33, 249-274 (2005). [\[pdf\]](http://geometry.stanford.edu/papers/zc-cph-05/zc-cph-05.pdf) 
-* Gunnar Carlsson, “Topology and Data”, *Bull. Amer. Math. Soc.* 46, 255-308 (2009). [\[link\]](http://www.ams.org/journals/bull/2009-46-02/S0273-0979-09-01249-X/)]
+* Gunnar Carlsson, “Topology and Data”, *Bull. Amer. Math. Soc.* 46, 255-308 (2009). [\[link\]](http://www.ams.org/journals/bull/2009-46-02/S0273-0979-09-01249-X/)
 * P. Y. Lum, G. Singh, A. Lehman, T. Ishkanov, M. Vejdemo-Johansson, M. Alagappan, J. Carlsson, G. Carlsson, “Extracting insights from the shape of complex data using topology”, *Sci. Rep.* 3, 1236 (2013). [\[link\]](http://www.nature.com/srep/2013/130207/srep01236/full/srep01236.html)
 * Robert Ghrist, “Barcodes: The persistent topology of data,” *Bull. Amer. Math. Soc.* 45, 1-15 (2008). [\[pdf\]](http://www.ams.org/journals/bull/2008-45-01/S0273-0979-07-01191-3/S0273-0979-07-01191-3.pdf) 
