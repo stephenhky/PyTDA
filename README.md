@@ -9,6 +9,13 @@ draw some insights from them. A lot of machine learning algorithms deal
 with distances, which are extremely useful, but they miss the 
 information the data may carry from their geometry.
 
+## Modularization
+This is not a repository for a Python package. Codes in this
+repository are for demonstration and described in the blog
+entries listed below. However, there will be an optimized
+code found in the package [`mogu`](https://pypi.org/project/mogu/), and
+you can refer to the codes in my another repository: [MoguNumerics](https://github.com/stephenhky/MoguNumerics) 
+
 ## Demo Codes and Blog Entries
 Codes in this repository are demo codes for a few entries of my blog,
 [Everything about Data Analytics](https://datawarrior.wordpress.com/),
