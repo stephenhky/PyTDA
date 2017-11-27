@@ -30,7 +30,7 @@ class SimplicialComplex:
         target_simplices = self.n_faces(i-1)
 
         if len(target_simplices)==0:
-            S = dok_matrix((1, len(source_simplices)), dtype=np.float32)
+            S = dok_matrix((1, len(source_simplices)), dtype=np.float64)
             S[0, 0:len(source_simplices)] = 1
         else:
             source_simplices_dict = {}
@@ -40,7 +40,7 @@ class SimplicialComplex:
             for i in range(len(target_simplices)):
                 target_simplices_dict[target_simplices[i]] = i
 
-            S = dok_matrix((len(target_simplices), len(source_simplices)), dtype=np.float32)
+            S = dok_matrix((len(target_simplices), len(source_simplices)), dtype=np.float64)
             for source_simplex in source_simplices:
                 for a in range(len(source_simplex)):
                     target_simplex = source_simplex[:a]+source_simplex[(a+1):]
