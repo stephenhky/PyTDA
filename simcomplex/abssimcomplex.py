@@ -33,12 +33,8 @@ class SimplicialComplex:
             S = dok_matrix((1, len(source_simplices)), dtype=np.float64)
             S[0, 0:len(source_simplices)] = 1
         else:
-            source_simplices_dict = {}
-            for j in range(len(source_simplices)):
-                source_simplices_dict[source_simplices[j]] = j
-            target_simplices_dict = {}
-            for i in range(len(target_simplices)):
-                target_simplices_dict[target_simplices[i]] = i
+            source_simplices_dict = {source_simplices[j]: j for j in range(len(source_simplices))}
+            target_simplices_dict = {target_simplices[i]: i for i in range(len(target_simplices))}
 
             S = dok_matrix((len(target_simplices), len(source_simplices)), dtype=np.float64)
             for source_simplex in source_simplices:
