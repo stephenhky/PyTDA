@@ -1,9 +1,10 @@
 __author__ = 'stephenhky'
 
-from itertools import combinations
 from scipy.sparse import dok_matrix
 import numpy as np
 from operator import add
+
+from . import faces
 
 class SimplicialComplex:
     def __init__(self, simplices=[]):
@@ -11,16 +12,7 @@ class SimplicialComplex:
 
     def import_simplices(self, simplices=[]):
         self.simplices = map(lambda simplex: tuple(sorted(simplex)), simplices)
-        self.face_set = self.faces()
-
-    def faces(self):
-        faceset = set()
-        for simplex in self.simplices:
-            numnodes = len(simplex)
-            for r in range(numnodes, 0, -1):
-                for face in combinations(simplex, r):
-                    faceset.add(face)
-        return faceset
+        self.face_set = faces(self.simplices)
 
     def n_faces(self, n):
         return filter(lambda face: len(face)==n+1, self.face_set)
