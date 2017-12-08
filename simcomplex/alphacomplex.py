@@ -6,6 +6,10 @@ from simcomplex import facesiter, get_allpoints
 from operator import or_
 from functools import partial
 
+def calculate_distmatrix(points, labels, distfcn):
+    return {(labels[i], labels[j]): distfcn(points[i], points[j])
+            for i in range(len(labels)) for j in range(len(labels))}
+
 def contain_detachededges(simplex, distdict, epsilon):
     if len(simplex)==2:
         return (distdict[simplex[0], simplex[1]] > 2*epsilon)
@@ -28,26 +32,21 @@ class AlphaComplex(SimplicialComplex):
         return distdict
 
     def construct_simplices(self, points, labels, epsilon, distfcn):
-        delaunay = Delaunay(points)
-        delaunay_simplices = map(tuple, delaunay.simplices)
-        distdict = self.calculate_distmatrix(points, labels, distfcn)
+        delaunay_simplices = map(tuple, Delaunay(points).simplices)
+        distdict = calculate_distmatrix(points, labels, distfcn)
 
         simplices = []
         for simplex in delaunay_simplices:
             faces = list(facesiter(simplex))
             detached = map(partial(contain_detachededges, distdict=distdict, epsilon=epsilon), faces)
-            if reduce(or_, detached):
-                if len(simplex)>2:
-                    for face, notkeep in zip(faces, detached):
-                        if not notkeep:
-                            simplices.append(face)
+            if True in detached and len(simplex)>2:
+                simplices += [face for face, notkeep in zip(faces, detached) if not notkeep]
             else:
                 simplices.append(simplex)
         simplices = map(lambda simplex: tuple(sorted(simplex)), simplices)
         simplices = list(set(simplices))
 
         allpts = get_allpoints(simplices)
-        for point in (set(labels)-allpts):
-            simplices += [(point,)]
+        simplices += [(point,) for point in (set(labels)-allpts)]
 
         return simplices
