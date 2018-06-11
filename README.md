@@ -13,8 +13,8 @@ information the data may carry from their geometry.
 This is not a repository for a Python package. Codes in this
 repository are for demonstration and described in the blog
 entries listed below. However, there will be an optimized
-code found in the package [`mogu`](https://pypi.org/project/mogu/), and
-you can refer to the codes in my another repository: [MoguNumerics](https://github.com/stephenhky/MoguNumerics) 
+code found in the package [`mogutda`](https://pypi.org/project/mogutda/), and
+you can refer to the codes in my another repository: [MoguTDA](https://github.com/stephenhky/MoguTDA)
 
 ## Demo Codes and Blog Entries
 Codes in this repository are demo codes for a few entries of my blog,
@@ -37,42 +37,12 @@ the simplicial complexes are, and how homologies are defined:
 It is recommended that for real application, you should use the following packages
 for efficiency, because my codes serve the pedagogical purpose only.
 
-### mogu
-Part of this code (optimized) have been included as part of the Python package `mogu`. You can install by:
-
-```
-pip install -U mogu
-```
-
-To establish a simplicial complex for a torus, type
-
-```
-import numpy as np
-from mogu.topology import SimplicialComplex
-
-torus_sc = [(1,2,4), (4,2,5), (2,3,5), (3,5,6), (5,6,1), (1,6,2), (6,7,2), (7,3,2),
-            (1,3,4), (3,4,6), (4,6,7), (4,5,7), (5,7,1), (7,3,1)]
-torus_c = SimplicialComplex(simplices=torus_sc)
-```
-
-To retrieve its Betti numbers, type:
-
-```
-print(torus_c.betti_number(0))   # print 1
-print(torus_c.betti_number(1))   # print 2
-print(torus_c.betti_number(2))   # print 1
-```
-
-For more information, please refer to the following pages:
-
-* [PyPI for mogu](https://pypi.org/project/mogu/)
-* Github: [stephenhky/mogu](https://github.com/stephenhky/MoguNumerics)
-
 ### C++
 * [Dionysus](http://www.mrzv.org/software/dionysus/)
 * [PHAT](https://bitbucket.org/phat-code/phat)
 
 ### Python
+* [mogutda](https://pypi.org/project/mogutda/)
 * [Dionysus](http://www.mrzv.org/software/dionysus/python/overview.html)
 
 ### R
@@ -84,4 +54,4 @@ For more information, please refer to the following pages:
 * Afra Zomorodian, Gunnar Carlsson, “Computing Persistent Homology,” *Discrete Comput. Geom.* 33, 249-274 (2005). [\[pdf\]](http://geometry.stanford.edu/papers/zc-cph-05/zc-cph-05.pdf) 
 * Gunnar Carlsson, “Topology and Data”, *Bull. Amer. Math. Soc.* 46, 255-308 (2009). [\[link\]](http://www.ams.org/journals/bull/2009-46-02/S0273-0979-09-01249-X/)
 * P. Y. Lum, G. Singh, A. Lehman, T. Ishkanov, M. Vejdemo-Johansson, M. Alagappan, J. Carlsson, G. Carlsson, “Extracting insights from the shape of complex data using topology”, *Sci. Rep.* 3, 1236 (2013). [\[link\]](http://www.nature.com/srep/2013/130207/srep01236/full/srep01236.html)
-* Robert Ghrist, “Barcodes: The persistent topology of data,” *Bull. Amer. Math. Soc.* 45, 1-15 (2008). [\[pdf\]](http://www.ams.org/journals/bull/2008-45-01/S0273-0979-07-01191-3/S0273-0979-07-01191-3.pdf) 
+* Robert Ghrist, “Barcodes: The persistent topology of data,” *Bull. Amer. Math. Soc.* 45, 1-15 (2008). [\[pdf\]](http://www.ams.org/journals/bull/2008-45-01/S0273-0979-07-01191-3/S0273-0979-07-01191-3.pdf)
