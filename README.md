@@ -1,4 +1,24 @@
 # PyTDA - Topological Data Analysis (TDA) for Python
+
+## Important Notice
+This repository is NOT a Python package. Codes in this
+repository are for demonstration and described in the blog
+entries listed below. And the codes in this repository run
+in Python 2.7 only.
+
+However, there will be an optimized
+code found in the package [`mogutda`](https://pypi.org/project/mogutda/), and
+you can refer to the codes in my another repository: [MoguTDA](https://github.com/stephenhky/MoguTDA)
+You can also install the package 'mogutda` by typing
+on the command prompt:
+
+```
+pip install -U mogutda
+```
+
+The package `mogutda` runs in Python 2.7, 3.5, and 3.6.
+
+
 ## Introduction
 PyTDA contains Python codes that demonstrate the numerical calculation
 of algebraic topology in an application to topological data analysis 
@@ -8,13 +28,6 @@ Topological data analysis aims at studying the shapes of the data, and
 draw some insights from them. A lot of machine learning algorithms deal 
 with distances, which are extremely useful, but they miss the 
 information the data may carry from their geometry.
-
-## Modularization
-This is not a repository for a Python package. Codes in this
-repository are for demonstration and described in the blog
-entries listed below. However, there will be an optimized
-code found in the package [`mogutda`](https://pypi.org/project/mogutda/), and
-you can refer to the codes in my another repository: [MoguTDA](https://github.com/stephenhky/MoguTDA)
 
 ## Demo Codes and Blog Entries
 Codes in this repository are demo codes for a few entries of my blog,
