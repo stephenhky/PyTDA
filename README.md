@@ -9,7 +9,7 @@ in Python 2.7 only.
 However, there will be an optimized
 code found in the package [`mogutda`](https://pypi.org/project/mogutda/), and
 you can refer to the codes in my another repository: [MoguTDA](https://github.com/stephenhky/MoguTDA)
-You can also install the package 'mogutda` by typing
+You can also install the package `mogutda` by typing
 on the command prompt:
 
 ```
