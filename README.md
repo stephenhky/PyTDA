@@ -39,6 +39,8 @@ and the corresponding entries are:
 * [Homology and Betti Numbers](https://datawarrior.wordpress.com/2015/11/03/tda-3-homology-and-betti-numbers/) (November 3, 2015)
 * [Topology in Physics and Computing](https://datawarrior.wordpress.com/2015/11/10/mathanalytics-6-topology-in-physics-and-computing/) (November 10, 2015)
 * [Persistence](https://datawarrior.wordpress.com/2015/12/20/tda-4-persistence/) (December 20, 2015)
+* [Topological Phases](https://datawarrior.wordpress.com/2016/10/06/topological-phases/) (October 6, 2016)
+* [moguTDA: Python package for Simplicial Complex](https://datawarrior.wordpress.com/2018/07/02/mogutda-python-package-for-simplicial-complex/) (July 2, 2018)
 
 ## Wolfram Demonstration
 Richard Hennigan put a nice Wolfram Demonstration online explaining what
